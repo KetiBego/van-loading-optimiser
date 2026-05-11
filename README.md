@@ -112,7 +112,7 @@ curl -X GET http://localhost:8080/api/v1/van/request/9dd673d1-e6db-40c9-bf65-9c6
   ],
   "totalVolume": 15,
   "totalRevenue": 320,
-  "createdAt": "2025-06-01T10:00:00Z"
+  "createdAt": "2026-06-01T10:00:00Z"
 }
 ```
 
@@ -135,13 +135,13 @@ curl -X GET "http://localhost:8080/api/v1/van/filter?minRevenue=100&maxRevenue=5
 #### დროის ინტერვალით ფილტრაცია
 
 ```bash
-curl -X GET "http://localhost:8080/api/v1/van/filter?fromDate=2026-04-01T00:00:00Z&toDate=2026-06-30T23:59:59Z"
+curl -X GET "http://localhost:8080/api/v1/van/filter?from=2026-04-01T00:00:00Z&to=2026-06-30T23:59:59Z"
 ```
 
 #### რამდენიმე პარამეტრის ერთად გამოყენება
 
 ```bash
-curl -X GET "http://localhost:8080/api/v1/van/filter?status=LOADED&minRevenue=200&fromDate=2026-04-01T00:00:00Z"
+curl -X GET "http://localhost:8080/api/v1/van/filter?status=LOADED&minRevenue=200&from=2026-04-01T00:00:00Z"
 ```
 
 რესპონსი:
