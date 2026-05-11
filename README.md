@@ -101,18 +101,19 @@ curl -X GET http://localhost:8080/api/v1/van/request/9dd673d1-e6db-40c9-bf65-9c6
   "selectedShipments": [
     {
       "name": "Parcel A",
-      "volume": 5,
-      "revenue": 120
+      "revenue": 120,
+      "volume": 5
     },
     {
       "name": "Parcel B",
-      "volume": 10,
-      "revenue": 200
+      "revenue": 200,
+      "volume": 10
     }
   ],
   "totalVolume": 15,
   "totalRevenue": 320,
-  "createdAt": "2026-06-01T10:00:00Z"
+  "createdAt": "2026-05-10T19:17:49.992251Z",
+  "loadStatus": "LOADED"
 }
 ```
 
@@ -150,17 +151,41 @@ curl -X GET "http://localhost:8080/api/v1/van/filter?status=LOADED&minRevenue=20
 [
   {
     "requestId": "9dd673d1-e6db-40c9-bf65-9c6b226563b6",
-    "loadStatus": "LOADED",
+    "selectedShipments": [
+      {
+        "name": "Parcel A",
+        "revenue": 120,
+        "volume": 5
+      },
+      {
+        "name": "Parcel B",
+        "revenue": 200,
+        "volume": 10
+      }
+    ],
     "totalVolume": 15,
     "totalRevenue": 320,
-    "createdAt": "2026-06-01T10:00:00Z"
+    "createdAt": "2026-05-10T19:17:49.992251Z",
+    "loadStatus": "LOADED"
   },
   {
-    "requestId": "7ca4b0d8-95d2-4a1e-9c2a-7d94c61f8f9e",
-    "loadStatus": "LOADED",
-    "totalVolume": 12,
-    "totalRevenue": 250,
-    "createdAt": "2026-06-02T15:30:00Z"
+    "requestId": "f5df0304-8eb4-454a-91f8-8266938a0962",
+    "selectedShipments": [
+      {
+        "name": "Parcel C",
+        "revenue": 80,
+        "volume": 3
+      },
+      {
+        "name": "Parcel D",
+        "revenue": 160,
+        "volume": 8
+      }
+    ],
+    "totalVolume": 11,
+    "totalRevenue": 240,
+    "createdAt": "2026-05-11T13:05:12.843813Z",
+    "loadStatus": "LOADED"
   }
 ]
 ```
